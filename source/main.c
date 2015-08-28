@@ -417,7 +417,7 @@ int main()
 	aptExit();
 	srvExit();
 
-	if(!strcmp(me->executablePath, REGIONFREE_PATH) && regionFreeAvailable && !netloader_boot)return regionFreeRun();
+	if(!strcmp(me->executablePath, REGIONFREE_PATH) && regionFreeAvailable && aptGetStatus() != APP_EXITING && !netloader_boot)return regionFreeRun();
 	
 	regionFreeExit();
 
